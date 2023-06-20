@@ -8,4 +8,5 @@ Software tool for identification of multiheme cytochromes
 ### Usage
     MHCscan.sh -i proteins.faa -g annotation.gff -o output.csv -t 16 --prot
 
-![pipeline]([http://url/to/img.png](https://github.com/Arkadiy-Garber/MHCscan/)https://github.com/Arkadiy-Garber/MHCscan/pipeline.png)
+![pipeline](https://github.com/Arkadiy-Garber/MHCscan/blob/main/pipeline.png)
+
