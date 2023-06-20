@@ -6,7 +6,7 @@ Software tool for identification of multiheme cytochromes
     git clone https://github.com/Arkadiy-Garber/MHCscan/tree/main
     conda create -n mhcscan -c bioconda -c conda-forge -c defaults hhsuite prodigal --yes
     
-#### *Put YfGenie main repo and bin into your PATH variable (recommended to ad this to your .bashrc, .bash_profile, .profile, or .zshrc scripts)*
+#### *Put YfGenie main repo and bin into your PATH variable (recommended to add this to your .bashrc, .bash_profile, .profile, or .zshrc scripts)*
     export PATH="/path/to/MHCscan:$PATH"
     export PATH="/path/to/MHCscan/bin:$PATH"
     
