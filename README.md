@@ -7,6 +7,7 @@ Software tool for identification of multiheme cytochromes
     
 ### [Download databases for hhsuite](https://github.com/soedinglab/hh-suite)
 We recommend using PDB70, which can be downloaded with the following command (make sure you have > 60 Gb of free storage space)
+
     wget https://wwwuser.gwdg.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/pdb70_from_mmcif_latest.tar.gz
 
 ### Usage
