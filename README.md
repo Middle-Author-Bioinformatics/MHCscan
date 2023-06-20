@@ -1,6 +1,7 @@
 # MHCscan
 Software tool for identification of multiheme cytochromes
 
+### [Install Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 ### Installation
     conda create -n mhcscan -c bioconda -c conda-forge -c defaults hhsuite prodigal --yes
 ### [Download databases for hhsuite](https://github.com/soedinglab/hh-suite)
