@@ -3,8 +3,9 @@ Software tool for identification of multiheme cytochromes
 
 ### [Install Miniconda](https://docs.conda.io/en/latest/miniconda.html)
 ### Installation
-    git clone 
+    git clone https://github.com/Arkadiy-Garber/MHCscan/tree/main
     conda create -n mhcscan -c bioconda -c conda-forge -c defaults hhsuite prodigal --yes
+#### *Put YfGenie main repo and bin into your PATH variable*
     
 ### [Download databases for hhsuite](https://github.com/soedinglab/hh-suite)
 We recommend using PDB70, which can be downloaded with the following command (make sure you have > 60 Gb of free storage space)
