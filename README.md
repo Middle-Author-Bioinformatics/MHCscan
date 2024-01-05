@@ -18,9 +18,10 @@ We recommend using PDB70, which can be downloaded with the following command (ma
 
     wget https://wwwuser.gwdg.de/~compbiol/data/hhsuite/databases/hhsuite_dbs/pdb70_from_mmcif_latest.tar.gz
 
-### Usage
+### Usage (with annotated genome)
     MHCscan.sh -i proteins.faa -g annotation.gff -o output.csv -t 16 --prot
 
+### Usage (with unannotated genome)
     MHCscan.sh -i contigs.fasta -o output.csv -t 16
 
 ![pipeline](https://github.com/Arkadiy-Garber/MHCscan/blob/main/pipeline.png)
