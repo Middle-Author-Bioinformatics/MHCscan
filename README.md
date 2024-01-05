@@ -21,5 +21,7 @@ We recommend using PDB70, which can be downloaded with the following command (ma
 ### Usage
     MHCscan.sh -i proteins.faa -g annotation.gff -o output.csv -t 16 --prot
 
+    MHCscan.sh -i contigs.fasta -o output.csv -t 16
+
 ![pipeline](https://github.com/Arkadiy-Garber/MHCscan/blob/main/pipeline.png)
 
