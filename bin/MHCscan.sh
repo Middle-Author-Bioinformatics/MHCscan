@@ -75,9 +75,9 @@ else
     echo '--Skipping Prodigal'
 fi
 
-remove_asterisk.py -f ${INPUT} -o ${INPUT%.*}-fixed.faa
+/home/ec2-user/bin/MHCScan/bin/remove_asterisk.py -f ${INPUT} -o ${INPUT%.*}-fixed.faa
 
-phobius.pl -short ${INPUT%.*}-fixed.faa > ${INPUT%.*}.phobius
+/home/ec2-user/bin/MHCScan/bin/phobius.pl -short ${INPUT%.*}-fixed.faa > ${INPUT%.*}.phobius
 
 if [[ ${PROT} == true ]]; then
     if [[ ${GFF} == "" ]]; then
@@ -86,23 +86,23 @@ if [[ ${PROT} == true ]]; then
     fi
 
 
-    cytoscan.py -p ${INPUT%.*}.phobius -f ${INPUT%.*}-fixed.faa -o ${OUTPUT} -g ${GFF} -i ${ID} --add_cds
+    /home/ec2-user/bin/MHCScan/bin/cytoscan.py -p ${INPUT%.*}.phobius -f ${INPUT%.*}-fixed.faa -o ${OUTPUT} -g ${GFF} -i ${ID} --add_cds
 
-    eval "$(conda shell.bash hook)"
-    conda activate hhsuite_env
-    mhc_annotate.py -i ${OUTPUT} -o ${OUTPUT}-annotated.csv -g ${GFF} --add_cds -id ${ID} -t ${THR}
-#    mv ${OUTPUT}-annotated.csv ${OUTPUT}
-    conda deactivate
+#    eval "$(conda shell.bash hook)"
+#    conda activate hhsuite_env
+#    /home/ec2-user/bin/MHCScan/bin/mhc_annotate.py -i ${OUTPUT} -o ${OUTPUT}-annotated.csv -g ${GFF} --add_cds -id ${ID} -t ${THR}
+##    mv ${OUTPUT}-annotated.csv ${OUTPUT}
+#    conda deactivate
 
 
 else
-    cytoscan.py -p ${INPUT%.*}.phobius -f ${INPUT%.*}-fixed.faa -o ${OUTPUT} --prodigal
+    /home/ec2-user/bin/MHCScan/bin/cytoscan.py -p ${INPUT%.*}.phobius -f ${INPUT%.*}-fixed.faa -o ${OUTPUT} --prodigal
 
-    eval "$(conda shell.bash hook)"
-    conda activate hhsuite_env
-    mhc_annotate.py -i ${OUTPUT} -o ${OUTPUT}-annotated.csv -id ${ID} -t ${THR}
-#    mv ${OUTPUT}-annotated.csv ${OUTPUT}
-    conda deactivate
+#    eval "$(conda shell.bash hook)"
+#    conda activate hhsuite_env
+#    /home/ec2-user/bin/MHCScan/bin/mhc_annotate.py -i ${OUTPUT} -o ${OUTPUT}-annotated.csv -id ${ID} -t ${THR}
+##    mv ${OUTPUT}-annotated.csv ${OUTPUT}
+#    conda deactivate
 fi
 
 #rm ${INPUT%.*}-fixed.faa
