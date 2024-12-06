@@ -7,7 +7,7 @@ function usage() {
 
     Options:
         -i, --input:  input genome or protein sequences in FASTA format
-        -o, --output: output directory namee
+        -o, --output: output directory name
         -g, --gff:    GFF file corresponding to protein sequences (ignore if unannotated contigs are provided)
         -d, --id:     attribute name of the locus tag in the GFF file
         -t, --thr:    parallel threads to use
