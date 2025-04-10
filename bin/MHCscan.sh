@@ -75,9 +75,9 @@ else
     echo '--Skipping Prodigal'
 fi
 
-/home/ec2-user/bin/MHCScan/bin/remove_asterisk.py -f ${INPUT} -o ${INPUT%.*}-fixed.faa
+/home/ark/MAB/bin/MHCScan/bin/remove_asterisk.py -f ${INPUT} -o ${INPUT%.*}-fixed.faa
 
-/home/ec2-user/bin/MHCScan/bin/phobius.pl -short ${INPUT%.*}-fixed.faa > ${INPUT%.*}.phobius
+/home/ark/MAB/bin/MHCScan/bin/phobius.pl -short ${INPUT%.*}-fixed.faa > ${INPUT%.*}.phobius
 
 if [[ ${PROT} == true ]]; then
     if [[ ${GFF} == "" ]]; then
@@ -86,7 +86,7 @@ if [[ ${PROT} == true ]]; then
     fi
 
 
-    /home/ec2-user/bin/MHCScan/bin/cytoscan.py -p ${INPUT%.*}.phobius -f ${INPUT%.*}-fixed.faa -o ${OUTPUT} -g ${GFF} -i ${ID} --add_cds
+    /home/ark/MAB/bin/MHCScan/bin/cytoscan.py -p ${INPUT%.*}.phobius -f ${INPUT%.*}-fixed.faa -o ${OUTPUT} -g ${GFF} -i ${ID} --add_cds
 
 #    eval "$(conda shell.bash hook)"
 #    conda activate hhsuite_env
@@ -96,7 +96,7 @@ if [[ ${PROT} == true ]]; then
 
 
 else
-    /home/ec2-user/bin/MHCScan/bin/cytoscan.py -p ${INPUT%.*}.phobius -f ${INPUT%.*}-fixed.faa -o ${OUTPUT} --prodigal
+    /home/ark/MAB/bin/MHCScan/bin/cytoscan.py -p ${INPUT%.*}.phobius -f ${INPUT%.*}-fixed.faa -o ${OUTPUT} --prodigal
 
 #    eval "$(conda shell.bash hook)"
 #    conda activate hhsuite_env
