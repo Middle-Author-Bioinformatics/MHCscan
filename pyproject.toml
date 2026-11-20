@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mhcscan-eet"
+version = "0.1.0"
+description = "Evidence-separated Gram-positive candidate EET screening and genomic neighborhoods"
+requires-python = ">=3.10"
+license = {text = "GPL-3.0-only"}
+dependencies = ["biopython>=1.83,<2"]
+
+[project.optional-dependencies]
+analysis = ["pyhmmer>=0.11,<0.13", "pyrodigal>=3.6,<4"]
+test = ["pytest>=8,<10"]
+
+[project.scripts]
+mhc-eet = "mhcscan_eet.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["mhcscan_eet*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

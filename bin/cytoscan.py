@@ -8,6 +8,10 @@ import sys
 import time
 
 
+# Shared motif characterization; extension added November 2026 (GPL-3.0-only).
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from mhcscan_eet.motifs import legacy_mhc_counts
+
 # TODO: ADD CYTOCHROME 579 HMM
 # TODO: ADD COLUMN WITH ORF STRAND
 
@@ -374,7 +378,7 @@ prots = fasta2(prots)
 for i in prots.keys():
 
     if re.findall(r'C(..)CH', prots[i]) or re.findall(r'C(...)CH', prots[i]):
-        hemes = len(re.findall(r'C(..)CH', prots[i])) + len(re.findall(r'C(...)CH', prots[i]))
+        hemes = legacy_mhc_counts(prots[i])
         Dict[i.split(" ")[0]].append("hemes")
         hemeDict[i.split(" ")[0]].append(hemes)
 

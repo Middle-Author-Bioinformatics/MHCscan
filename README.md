@@ -26,3 +26,14 @@ We recommend using PDB70, which can be downloaded with the following command (ma
 
 ![pipeline](https://github.com/Arkadiy-Garber/MHCscan/blob/main/pipeline.png)
 
+
+## Gram-positive candidate EET wrapper
+
+A new `mhc-eet` CLI combines MHCscan sequence characterization, FeGenie family
+HMMs, FEET motif compatibility, and coordinate-based surface-domain neighborhoods.
+It keeps same-protein domains, nearby anchoring machinery and optional localization
+evidence separate. The default broad screen is at least two canonical CXXCH motifs.
+
+See [installation, database setup, commands and interpretation](docs/GRAM_POSITIVE_EET.md),
+[repository/license audit](docs/REPOSITORY_AUDIT.md), and [validation](docs/VALIDATION.md).
+This extension was added in November 2026; the original command remains available.
