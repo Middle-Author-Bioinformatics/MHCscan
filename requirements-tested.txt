@@ -1,0 +1,5 @@
+# Analysis dependencies used for validation on Linux / Python 3.12.
+biopython==1.88
+pyhmmer==0.12.3
+pyrodigal==3.7.1
+pytest==9.2.0
